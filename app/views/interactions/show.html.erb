@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Session:</strong>
+  <%= @interaction.session %>
+</p>
+
+<p>
+  <strong>Word:</strong>
+  <%= @interaction.word %>
+</p>
+
+<p>
+  <strong>Source:</strong>
+  <%= @interaction.source %>
+</p>
+
+<%= link_to 'Edit', edit_interaction_path(@interaction) %> |
+<%= link_to 'Back', interactions_path %>

@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  place: MyString
+  wallpaper: MyString
+  custom_style: MyText
+  event_date: 2018-05-31
+
+two:
+  place: MyString
+  wallpaper: MyString
+  custom_style: MyText
+  event_date: 2018-05-31

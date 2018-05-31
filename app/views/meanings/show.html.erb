@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Interaction:</strong>
+  <%= @meaning.interaction %>
+</p>
+
+<p>
+  <strong>Meaning:</strong>
+  <%= @meaning.meaning %>
+</p>
+
+<p>
+  <strong>Creator:</strong>
+  <%= @meaning.creator %>
+</p>
+
+<%= link_to 'Edit', edit_meaning_path(@meaning) %> |
+<%= link_to 'Back', meanings_path %>

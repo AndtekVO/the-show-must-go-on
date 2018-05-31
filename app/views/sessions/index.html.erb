@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Sessions</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Place</th>
+      <th>Wallpaper</th>
+      <th>Custom style</th>
+      <th>Event date</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sessions.each do |session| %>
+      <tr>
+        <td><%= session.place %></td>
+        <td><%= session.wallpaper %></td>
+        <td><%= session.custom_style %></td>
+        <td><%= session.event_date %></td>
+        <td><%= link_to 'Show', session %></td>
+        <td><%= link_to 'Edit', edit_session_path(session) %></td>
+        <td><%= link_to 'Destroy', session, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Session', new_session_path %>
