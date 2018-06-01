@@ -1447,6 +1447,9 @@ aside .aside-content,
   #chart-project-progress {
     height: 225px;
   }
+  .container-fluid {
+    margin-top:80px;
+  }
 }
 #sidebar-secondary {
   background: transparent;
