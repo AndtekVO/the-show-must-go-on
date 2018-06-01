@@ -15,7 +15,7 @@
   <tbody>
     <% @meanings.each do |meaning| %>
       <tr>
-        <td><%= meaning.interaction %></td>
+        <td><%= meaning.interaction.word %></td>
         <td><%= meaning.meaning %></td>
         <td><%= meaning.creator %></td>
         <td><%= link_to 'Show', meaning %></td>

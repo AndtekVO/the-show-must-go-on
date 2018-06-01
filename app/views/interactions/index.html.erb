@@ -15,7 +15,7 @@
   <tbody>
     <% @interactions.each do |interaction| %>
       <tr>
-        <td><%= interaction.session %></td>
+        <td><%= interaction.session.place %></td>
         <td><%= interaction.word %></td>
         <td><%= interaction.source %></td>
         <td><%= link_to 'Show', interaction %></td>

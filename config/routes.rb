@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  root :to => "dashboard#index"
+
   resources :meanings
   resources :interactions
   resources :sessions
