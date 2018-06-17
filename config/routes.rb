@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'interact/post'
+
   root :to => "dashboard#index"
 
   resources :meanings

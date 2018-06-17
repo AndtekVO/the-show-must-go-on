@@ -11,9 +11,33 @@ class Interaction < ApplicationRecord
       config.access_token_secret = "BRoKlJV6KVplbKNxVuX2mtVFr6D47jtUNXmTs48VOhHdq"
     end    
     result = []
-    client.search("#AndtekVO", result_type: "recent").collect do |tweet|
+    client.search("#AndtekLive", result_type: "recent").collect do |tweet|
       result << {"@#{tweet.user.screen_name}": "#{tweet.text}"}
     end
     result
+  end
+  def self.update_twitter
+    tweets = get_tweets()
+    tweets.each do |tweet| 
+      creator = tweet.keys[0]
+      clear = tweet.values[0].gsub('#AndtekLive ', '').split(" - ")
+      meaning = clear[1]
+      word = clear[0]
+      
+      interaction = Interaction.new
+      mean = Meaning.new
+      
+      interaction.session_id = 1
+      interaction.word = word
+      interaction.source = 2
+      
+      mean.meaning = meaning
+      mean.creator = creator
+      
+      interaction.meanings << mean
+      
+      interaction.save
+      
+    end
   end
 end
